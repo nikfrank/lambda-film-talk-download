@@ -1,0 +1,20 @@
+{
+  "name": "lambda-film-download",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "MODE=LOCAL node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikfrank/lambda-film-talk-download.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikfrank/lambda-film-talk-download/issues"
+  },
+  "homepage": "https://github.com/nikfrank/lambda-film-talk-download#readme"
+}
