@@ -5,7 +5,7 @@ const s3 = new AWS.S3();
 exports.handler = (event, context) => {
   const params = {
     "Bucket": "lambda-film-talk-output",
-    "Key": event.queryStringParameters.key  
+    "Key": event.queryStringParameters.key
   };
   
   s3.getObject(params, (err, data)=>{
@@ -15,7 +15,8 @@ exports.handler = (event, context) => {
       const response = {
         "statusCode": 200,
         "headers": {
-          "Content-Type": "image/png"
+          "Content-Type": event.queryStringParameters.key.match(/\.mp4$/) ?
+          "video/mp4" : "image/png"
         },
         "body": data.Body.toString('base64'),
         "isBase64Encoded": true
